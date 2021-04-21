@@ -1,4 +1,4 @@
-// Acitve Navbar item
+// Acitve Navbar item (クリックするとHighlightになる。)
 var navItems = document.querySelectorAll(".header__navbar-item");
 for( let navItem of navItems) {
     navItem.onclick = function() {
@@ -8,6 +8,7 @@ for( let navItem of navItems) {
         this.classList.add("header__navbar-item--active")
     }
 }
+
 // Menu button for tablet and mobile
 
 // Subnav Slider
