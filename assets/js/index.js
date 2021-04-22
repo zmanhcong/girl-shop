@@ -11,7 +11,7 @@ for( let navItem of navItems) {
 
 // Menu button for tablet and mobile
 
-// Subnav Slider
+// Subnav Slider (CROSSBODY)
 $('.subnav-slider-owl.owl-carousel').owlCarousel({
     loop:false,
     rewind: true,
@@ -34,7 +34,7 @@ $('.subnav-slider-owl.owl-carousel').owlCarousel({
 })
 
 
-// Main Slider
+// Main Slider (NEW ARRIVALS)
 $('.main-slider-owl').owlCarousel({
     loop:true,
     rewind: true,
@@ -64,23 +64,23 @@ $('.main-slider-owl').owlCarousel({
 
 
 
-// Main slider navbutton transition
+// Main slider navbutton transition (điều hướng trái phải của NEW ARRIVALS)
 var navPrev = document.querySelector('.main-slider-owl .owl-prev');
 var navNext = document.querySelector('.main-slider-owl .owl-next');
 var mainSlider = document.querySelector('.main-slider');
-mainSlider.onmouseover = function() {
-    Object.assign(navPrev.style,{opacity:"1",visibility:"visible",left:"36%"});
+mainSlider.onmouseover = function() {   /* Execute a JavaScript when moving the mouse pointer onto an object */
+    Object.assign(navPrev.style,{opacity:"1",visibility:"visible",left:"36%"});    /*  copies the values Object.assign(target, ...sources) */
     Object.assign(navNext.style,{opacity:"1",visibility:"visible",right:"36%"});
 }
 
-mainSlider.onmouseout = function() {
+mainSlider.onmouseout = function() {  /* When move the mouse pointer away */
     Object.assign(navPrev.style,{opacity:"0",visibility:"hidden",left:"38%"});
     Object.assign(navNext.style,{opacity:"0",visibility:"hidden",right:"38%"});
 }
 
 
 
-// Scroll to top 
+// Scroll to top
 var scrollBtn = document.querySelector('.scroll-top')
 // console.log(scrollBtn)
 
@@ -88,7 +88,7 @@ var scrollBtn = document.querySelector('.scroll-top')
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {  /* nếu đang ở vị trí cách đỉnh 1200px hoặc cuộn  1200px */
     scrollBtn.style.opacity = "1";
     scrollBtn.style.visibility = "visible";
   } else {

@@ -870,7 +870,7 @@ body {
 }
 
 .main-slider__item-img::before {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1148,6 +1148,13 @@ body {
     position: relative;
 }
 
+/* after hover , ::before and ::after is excute */
+.items-wrapper__big:hover .items-wrapper__big-inner::before,
+.items-wrapper__big:hover .items-wrapper__big-inner::after {
+    height: 100%;
+    width: 100%;
+}
+
 .items-wrapper__big-inner::before {
     background: rgba(0, 0, 0, 0.3);
     content: "";
@@ -1158,7 +1165,7 @@ body {
     left: 0;
     width: 0;
     height: 0;
-    transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; /* ease-out transition */
     z-index: 1;
 }
 
@@ -1172,15 +1179,11 @@ body {
     right: 0;
     width: 0;
     height: 0;
-    transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; /* ease-out transition */
     z-index: 1;
 }
 
-.items-wrapper__big:hover .items-wrapper__big-inner::before,
-.items-wrapper__big:hover .items-wrapper__big-inner::after {
-    height: 100%;
-    width: 100%;
-}
+
 
 .items-wrapper__big-img {
     width: 100%;
